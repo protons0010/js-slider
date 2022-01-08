@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript Slider </title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	 <div id="container">
+	 	<div class="slider_container">
+	 		<div class="slideritems active"><img src="tree.jpg" alt="" /></div>
+	 		<div class="slideritems"><img src="flower.jpg" alt=""/></div>
+	 		<div class="slideritems"><img src="river.jpg" alt=""></div>
+	 		<div class="slideritems"><img src="breatheless.jpg"></div>
+
+	 		<div class="slideritems"><img src="father.jpg" alt=""></div>
+	 		<div class="slideritems"><img src="field.jpg" alt=""></div>
+
+	 	</div>
+	 </div>
+
+       <button id="changeSlide"> click</button>
+
+
+	 <script type="text/javascript">
+        document.querySelector("#changeSlide").addEventListener("click",function(){
+
+
+
+	 	if (document.getElementsByClassName("slideritems")[0].classList.contains("active")){
+
+	 		document.getElementsByClassName("slideritems")[1].classList.add("active");
+	 		document.getElementsByClassName("slideritems")[0].classList.remove("active");
+
+	 	}else if(document.getElementByClassName("slideritems")[1].classList.contains("active")){
+	 		document.getElementsByClassName("slideritems")[2].classList.add("active");
+	 		document.getElementsByClassName("slideritems")[1].classList.remove("active");
+
+	 	}else if (document.getElementsByClassName("slideritems")[2].classList.contains("active")){
+	 		document.getElementsByClassName("slideritems")[3].classList.add("active");
+	 		document.getElementsByClassName("slideritems")[2].classList.remove("active");
+	 	}
+
+});
+
+        // Another way to  writting that javascript 
+
+//          document.querySelector("#changeSlide").addEventListener("click",function(){
+
+
+
+// 	 	if (document.getElementsByClassName("slideritems")[0].classList.contains("active")){
+
+// 	 		document.getElementsByClassName("slideritems")[1].classList.toggle("active");
+	 		
+
+// 	 	}else if(document.getElementByClassName("slideritems")[1].classList.contains("active")){
+// 	 		document.getElementsByClassName("slideritems")[2].classList.toggle("active");
+	
+
+// 	 	}else if (document.getElementsByClassName("slideritems")[2].classList.contains("active")){
+// 	 		document.getElementsByClassName("slideritems")[3].classList.toggle("active");
+	 		
+// 	 	}
+
+// });
+	 </script>
+
+
+
+</body>
+</html>
